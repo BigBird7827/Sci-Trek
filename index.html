@@ -293,6 +293,32 @@
       padding:4px 0 0;
     }
 
+    
+    .subsection{
+      margin-top:10px;
+      padding:10px 10px 9px;
+      border-radius: 12px;
+      border: 1px solid rgba(242, 211, 124, .18);
+      background: rgba(10, 14, 24, .30);
+    }
+
+    .subsection:first-child{ margin-top:0; }
+
+    .subsection h4{
+      margin:0 0 6px;
+      font-size: 13px;
+      letter-spacing:.22px;
+      color: rgba(233, 238, 248, .96);
+    }
+
+    .subsection p{
+      margin:0;
+      color: rgba(233, 238, 248, .92);
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+
     @media (max-width: 980px){
       body{ overflow:auto; }
       .app{ padding:14px; }
@@ -335,12 +361,12 @@
 
           <div class="section">
             <h3>Similar Today</h3>
-            <ul id="todayList"></ul>
+            <div id="todayBlocks"></div>
           </div>
 
           <div class="section">
             <h3>Currently Being Developed</h3>
-            <ul id="devList"></ul>
+            <div id="devBlocks"></div>
           </div>
 
           <div class="section">
@@ -355,7 +381,7 @@
   </div>
 
   <script>
-    const DATA_URL = "./Sci-Build-2.json";
+    const DATA_URL = "https://raw.githubusercontent.com/BigBird7827/Sci-Trek/main/Science.json";
     let TECH = [];
 
     async function loadTech(){
@@ -372,6 +398,8 @@
           trek: x?.trek ?? "",
           today: Array.isArray(x?.today) ? x.today : [],
           dev: Array.isArray(x?.dev) ? x.dev : [],
+          todaySections: Array.isArray(x?.todaySections) ? x.todaySections : [],
+          devSections: Array.isArray(x?.devSections) ? x.devSections : [],
           notes: x?.notes ?? ""
         })).filter(x => x.id && x.title);
         TECH.sort((a,b) => (a.title || "").localeCompare(b.title || ""));
@@ -389,8 +417,8 @@
       detailTitle: document.getElementById("detailTitle"),
       badgeRow: document.getElementById("badgeRow"),
       trekDesc: document.getElementById("trekDesc"),
-      todayList: document.getElementById("todayList"),
-      devList: document.getElementById("devList"),
+      todayBlocks: document.getElementById("todayBlocks"),
+      devBlocks: document.getElementById("devBlocks"),
       notes: document.getElementById("notes")
     };
 
@@ -439,12 +467,38 @@
       });
     }
 
-    function renderList(targetEl, items){
+    function renderBlocks(targetEl, sections, fallbackItems){
       targetEl.innerHTML = "";
-      (items || []).forEach(x => {
-        const li = document.createElement("li");
-        li.textContent = x;
-        targetEl.appendChild(li);
+
+      const safeSections = Array.isArray(sections) ? sections.filter(s => s && (s.title || s.text)) : [];
+      if (safeSections.length){
+        safeSections.forEach(s => {
+          const wrap = document.createElement("div");
+          wrap.className = "subsection";
+
+          const h = document.createElement("h4");
+          h.textContent = s.title || "";
+          wrap.appendChild(h);
+
+          const p = document.createElement("p");
+          p.textContent = s.text || "";
+          wrap.appendChild(p);
+
+          targetEl.appendChild(wrap);
+        });
+        return;
+      }
+
+      const items = Array.isArray(fallbackItems) ? fallbackItems.filter(Boolean) : [];
+      items.forEach(x => {
+        const wrap = document.createElement("div");
+        wrap.className = "subsection";
+
+        const p = document.createElement("p");
+        p.textContent = x;
+        wrap.appendChild(p);
+
+        targetEl.appendChild(wrap);
       });
     }
 
@@ -463,8 +517,8 @@
       `;
 
       els.trekDesc.textContent = tech.trek;
-      renderList(els.todayList, tech.today);
-      renderList(els.devList, tech.dev);
+      renderBlocks(els.todayBlocks, tech.todaySections, tech.today);
+      renderBlocks(els.devBlocks, tech.devSections, tech.dev);
       els.notes.textContent = tech.notes || "";
     }
 
@@ -479,8 +533,8 @@
         els.detailTitle.textContent = "Failed to load data";
         els.badgeRow.innerHTML = "";
         els.trekDesc.textContent = `Could not load ${DATA_URL}.`;
-        els.todayList.innerHTML = "";
-        els.devList.innerHTML = "";
+        els.todayBlocks.innerHTML = "";
+        els.devBlocks.innerHTML = "";
         els.notes.textContent = result.error;
         return;
       }
