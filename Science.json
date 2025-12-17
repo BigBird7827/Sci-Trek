@@ -7,7 +7,9 @@
     "trek": "",
     "today": [],
     "dev": [],
-    "notes": ""
+    "notes": "",
+    "todaySections": [],
+    "devSections": []
   },
   {
     "id": "shields-force-fields",
@@ -17,7 +19,9 @@
     "trek": "",
     "today": [],
     "dev": [],
-    "notes": ""
+    "notes": "",
+    "todaySections": [],
+    "devSections": []
   },
   {
     "id": "dermal-regenerator",
@@ -27,7 +31,9 @@
     "trek": "",
     "today": [],
     "dev": [],
-    "notes": ""
+    "notes": "",
+    "todaySections": [],
+    "devSections": []
   },
   {
     "id": "holodeck",
@@ -37,7 +43,9 @@
     "trek": "",
     "today": [],
     "dev": [],
-    "notes": ""
+    "notes": "",
+    "todaySections": [],
+    "devSections": []
   },
   {
     "id": "replicator",
@@ -47,7 +55,9 @@
     "trek": "",
     "today": [],
     "dev": [],
-    "notes": ""
+    "notes": "",
+    "todaySections": [],
+    "devSections": []
   },
   {
     "id": "tricorder",
@@ -56,18 +66,64 @@
     "maturity": "Partial capability",
     "trek": "A handheld sensor/computer used for rapid scanning and analysis. Medical tricorders are tuned for diagnosis and often include a detachable scanner/probe for high‑resolution readings, usable in sickbay or on away missions.",
     "today": [
-      "Handheld/phone-connected point-of-care ultrasound scanners",
-      "Wearable vital-sign monitors (ECG, pulse rate, SpO₂, temperature, respiration) and clinical wearable patches",
-      "Point-of-care rapid tests and portable lab devices for key biomarkers",
-      "AI-assisted triage and decision-support tools used alongside clinician judgment"
+      "Handheld imaging: Portable ultrasound has become one of the closest real-world “scanner” tools: pocket-sized probes can connect to a phone or tablet and produce real-time images for many bedside uses. In clinics and ambulances, handheld ultrasound is increasingly used to quickly assess the heart, lungs, abdomen, pregnancy status, and fluid buildup, especially when speed matters.",
+      "Vitals and continuous monitoring: Wearables and patches can track heart rate continuously and can flag irregular rhythms in some cases. Pulse oximeters monitor oxygen saturation. Many consumer devices estimate sleep, stress proxies, and activity, while clinical-grade patches and monitors can record ECG data for days to weeks under medical supervision.",
+      "Home diagnostic peripherals: A growing ecosystem of home devices can capture specific clinical signals: blood pressure cuffs, digital thermometers, digital stethoscopes, portable spirometers/peak-flow meters for airway measurement, and connected otoscopes for ear exams. These tools aren’t one tricorder, but they cover many of the same “quick checks” a field medic would want.",
+      "Point-of-care and rapid testing: Rapid tests and small meters provide fast answers for targeted questions: glucose and ketones, pregnancy, urinalysis strips, infectious disease antigen tests, and other single-purpose assays. Some point-of-care platforms used in clinics can run small panels of blood chemistry or biomarkers with short turnaround times.",
+      "Telemedicine workflows: Remote care increasingly pairs video visits with data from home devices. The practical “tricorder effect” comes from combining multiple signals—symptoms, vitals, and targeted measurements—so a clinician can make better decisions without an in-person exam.",
+      "What it can’t do yet: No single handheld device can non-invasively scan the body and reliably diagnose a wide range of conditions in minutes. Many measurements still require user skill (for example, ultrasound technique), confirmation testing, and clinical context. False alarms, noisy signals, and overlapping symptoms remain major limits."
     ],
     "dev": [
-      "Multi-sensor handheld diagnostics combining imaging, vital signs, and chemistry in one device",
-      "Better non-invasive continuous monitoring (more biomarkers, fewer false alarms, better artifact handling)",
-      "Clinically validated AI that can suggest differential diagnoses and next tests from multimodal data",
-      "Lab-on-a-chip systems that run broader panels from tiny samples with faster turnaround"
+      "Multimodal “all-in-one” devices: The development path looks like convergence: integrating imaging, vital monitoring, and compact lab-style testing into fewer devices, with better calibration and self-checking so non-experts can still get useful results.",
+      "Non-invasive biomarkers: A key leap would be reliable non-invasive measurement of more biomarkers (beyond basic vitals), such as continuous chemistry signals or inflammation markers, with low false positives and robust performance across skin tones, motion, and real-world noise.",
+      "Clinical AI with validation: AI will help most when it is clinically validated, explains its confidence, and recommends the next best test rather than claiming instant diagnosis. The frontier is safe decision support that reduces missed diagnoses without flooding users with unnecessary alarms.",
+      "Lab-on-a-chip and microfluidics: Miniaturized testing using microfluidics aims to run broader panels from tiny samples quickly, potentially moving more of what a lab does into portable form factors."
     ],
-    "notes": "The Qualcomm Tricorder XPRIZE (2015–2017) pushed teams to build portable devices that track vital signs and help diagnose multiple conditions outside a clinic. Today’s “tricorder-like” capability exists as a toolkit of devices (ultrasound + wearables + rapid tests) rather than one all-in-one scanner."
+    "notes": "Tricorder-like capability today is best understood as a toolkit: portable imaging, vital monitoring, targeted rapid testing, and telemedicine workflows. The main gap is broad, reliable diagnosis from non-invasive signals without trained operators.",
+    "todaySections": [
+      {
+        "title": "Handheld imaging",
+        "text": "Portable ultrasound has become one of the closest real-world “scanner” tools: pocket-sized probes can connect to a phone or tablet and produce real-time images for many bedside uses. In clinics and ambulances, handheld ultrasound is increasingly used to quickly assess the heart, lungs, abdomen, pregnancy status, and fluid buildup, especially when speed matters."
+      },
+      {
+        "title": "Vitals and continuous monitoring",
+        "text": "Wearables and patches can track heart rate continuously and can flag irregular rhythms in some cases. Pulse oximeters monitor oxygen saturation. Many consumer devices estimate sleep, stress proxies, and activity, while clinical-grade patches and monitors can record ECG data for days to weeks under medical supervision."
+      },
+      {
+        "title": "Home diagnostic peripherals",
+        "text": "A growing ecosystem of home devices can capture specific clinical signals: blood pressure cuffs, digital thermometers, digital stethoscopes, portable spirometers/peak-flow meters for airway measurement, and connected otoscopes for ear exams. These tools aren’t one tricorder, but they cover many of the same “quick checks” a field medic would want."
+      },
+      {
+        "title": "Point-of-care and rapid testing",
+        "text": "Rapid tests and small meters provide fast answers for targeted questions: glucose and ketones, pregnancy, urinalysis strips, infectious disease antigen tests, and other single-purpose assays. Some point-of-care platforms used in clinics can run small panels of blood chemistry or biomarkers with short turnaround times."
+      },
+      {
+        "title": "Telemedicine workflows",
+        "text": "Remote care increasingly pairs video visits with data from home devices. The practical “tricorder effect” comes from combining multiple signals—symptoms, vitals, and targeted measurements—so a clinician can make better decisions without an in-person exam."
+      },
+      {
+        "title": "What it can’t do yet",
+        "text": "No single handheld device can non-invasively scan the body and reliably diagnose a wide range of conditions in minutes. Many measurements still require user skill (for example, ultrasound technique), confirmation testing, and clinical context. False alarms, noisy signals, and overlapping symptoms remain major limits."
+      }
+    ],
+    "devSections": [
+      {
+        "title": "Multimodal “all-in-one” devices",
+        "text": "The development path looks like convergence: integrating imaging, vital monitoring, and compact lab-style testing into fewer devices, with better calibration and self-checking so non-experts can still get useful results."
+      },
+      {
+        "title": "Non-invasive biomarkers",
+        "text": "A key leap would be reliable non-invasive measurement of more biomarkers (beyond basic vitals), such as continuous chemistry signals or inflammation markers, with low false positives and robust performance across skin tones, motion, and real-world noise."
+      },
+      {
+        "title": "Clinical AI with validation",
+        "text": "AI will help most when it is clinically validated, explains its confidence, and recommends the next best test rather than claiming instant diagnosis. The frontier is safe decision support that reduces missed diagnoses without flooding users with unnecessary alarms."
+      },
+      {
+        "title": "Lab-on-a-chip and microfluidics",
+        "text": "Miniaturized testing using microfluidics aims to run broader panels from tiny samples quickly, potentially moving more of what a lab does into portable form factors."
+      }
+    ]
   },
   {
     "id": "universal-translator",
@@ -77,7 +133,9 @@
     "trek": "",
     "today": [],
     "dev": [],
-    "notes": ""
+    "notes": "",
+    "todaySections": [],
+    "devSections": []
   },
   {
     "id": "fusion-power",
@@ -87,7 +145,9 @@
     "trek": "",
     "today": [],
     "dev": [],
-    "notes": ""
+    "notes": "",
+    "todaySections": [],
+    "devSections": []
   },
   {
     "id": "antimatter-production-and-use",
@@ -97,7 +157,9 @@
     "trek": "",
     "today": [],
     "dev": [],
-    "notes": ""
+    "notes": "",
+    "todaySections": [],
+    "devSections": []
   },
   {
     "id": "quantum-sensing",
@@ -107,7 +169,9 @@
     "trek": "",
     "today": [],
     "dev": [],
-    "notes": ""
+    "notes": "",
+    "todaySections": [],
+    "devSections": []
   },
   {
     "id": "active-camouflage",
@@ -117,6 +181,8 @@
     "trek": "",
     "today": [],
     "dev": [],
-    "notes": ""
+    "notes": "",
+    "todaySections": [],
+    "devSections": []
   }
 ]
