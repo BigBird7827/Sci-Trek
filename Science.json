@@ -1,0 +1,122 @@
+[
+  {
+    "id": "phaser",
+    "title": "Phaser",
+    "category": "",
+    "maturity": "",
+    "trek": "",
+    "today": [],
+    "dev": [],
+    "notes": ""
+  },
+  {
+    "id": "shields-force-fields",
+    "title": "Shields / Force Fields",
+    "category": "",
+    "maturity": "",
+    "trek": "",
+    "today": [],
+    "dev": [],
+    "notes": ""
+  },
+  {
+    "id": "dermal-regenerator",
+    "title": "Dermal Regenerator",
+    "category": "",
+    "maturity": "",
+    "trek": "",
+    "today": [],
+    "dev": [],
+    "notes": ""
+  },
+  {
+    "id": "holodeck",
+    "title": "Holodeck",
+    "category": "",
+    "maturity": "",
+    "trek": "",
+    "today": [],
+    "dev": [],
+    "notes": ""
+  },
+  {
+    "id": "replicator",
+    "title": "Replicator",
+    "category": "",
+    "maturity": "",
+    "trek": "",
+    "today": [],
+    "dev": [],
+    "notes": ""
+  },
+  {
+    "id": "tricorder",
+    "title": "Tricorder",
+    "category": "Medicine",
+    "maturity": "Partial capability",
+    "trek": "A handheld sensor/computer used for rapid scanning and analysis. Medical tricorders are tuned for diagnosis and often include a detachable scanner/probe for high‑resolution readings, usable in sickbay or on away missions.",
+    "today": [
+      "Handheld/phone-connected point-of-care ultrasound scanners",
+      "Wearable vital-sign monitors (ECG, pulse rate, SpO₂, temperature, respiration) and clinical wearable patches",
+      "Point-of-care rapid tests and portable lab devices for key biomarkers",
+      "AI-assisted triage and decision-support tools used alongside clinician judgment"
+    ],
+    "dev": [
+      "Multi-sensor handheld diagnostics combining imaging, vital signs, and chemistry in one device",
+      "Better non-invasive continuous monitoring (more biomarkers, fewer false alarms, better artifact handling)",
+      "Clinically validated AI that can suggest differential diagnoses and next tests from multimodal data",
+      "Lab-on-a-chip systems that run broader panels from tiny samples with faster turnaround"
+    ],
+    "notes": "The Qualcomm Tricorder XPRIZE (2015–2017) pushed teams to build portable devices that track vital signs and help diagnose multiple conditions outside a clinic. Today’s “tricorder-like” capability exists as a toolkit of devices (ultrasound + wearables + rapid tests) rather than one all-in-one scanner."
+  },
+  {
+    "id": "universal-translator",
+    "title": "Universal Translator",
+    "category": "",
+    "maturity": "",
+    "trek": "",
+    "today": [],
+    "dev": [],
+    "notes": ""
+  },
+  {
+    "id": "fusion-power",
+    "title": "Fusion Power",
+    "category": "",
+    "maturity": "",
+    "trek": "",
+    "today": [],
+    "dev": [],
+    "notes": ""
+  },
+  {
+    "id": "antimatter-production-and-use",
+    "title": "Antimatter Production and Use",
+    "category": "",
+    "maturity": "",
+    "trek": "",
+    "today": [],
+    "dev": [],
+    "notes": ""
+  },
+  {
+    "id": "quantum-sensing",
+    "title": "Quantum Sensing",
+    "category": "",
+    "maturity": "",
+    "trek": "",
+    "today": [],
+    "dev": [],
+    "notes": ""
+  },
+  {
+    "id": "active-camouflage",
+    "title": "Active Camouflage",
+    "category": "",
+    "maturity": "",
+    "trek": "",
+    "today": [],
+    "dev": [],
+    "notes": ""
+  }
+]
